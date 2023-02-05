@@ -29,7 +29,6 @@ describe("GET /tickets/types", () => {
     const token = faker.lorem.word();
 
     const response = await server.get("/tickets/types").set("Authorization", `Bearer ${token}`);
-
     expect(response.status).toBe(httpStatus.UNAUTHORIZED);
   });
 
